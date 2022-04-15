@@ -5,13 +5,15 @@ import About from './components/about/About.jsx';
 import ProductList from './components/productList/ProductList';
 import Contact from './components/contact/Contact';
 import Toggle from './components/toggle/Toggle';
-import { useState } from 'react';
-import { ThemeProvider } from './context';
+import { useContext, useState } from 'react';
+import { ThemeContext, ThemeProvider } from './context';
 
 function App() {
-const [dark,setdark] = useState(false)
+
+const theme = useContext(ThemeContext);
+const darkMode = theme.state.darkMode;
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:darkMode ? "#222" : "white", color:"white"}}>
       <Toggle />
       <Intro/>
       <About/>
