@@ -26,5 +26,9 @@
         position: absolute;
         cursor: pointer;
         left: 0;
+
+        &:hover {
+            border: solid 1px lightgreen;
+        }
     }
 }
