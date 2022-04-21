@@ -10,10 +10,10 @@
   justify-content: center;
 
   .i-scroll {
-      height: 30px;
-      width: 30px;
-      position: absolute;
-      bottom: 20px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 20px;
   }
 
   .i-left-wrapper {
@@ -91,5 +91,22 @@
     right: 0;
     left: 0;
     z-index: 1;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .i {
+    flex-direction: column;
+
+    .i-left-wrapper {
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    .i-bg {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
   }
 }
